@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="static/assets/images/favicon.png" type="image/png">
+  <title></title>
+   <link href="static/assets/css/icons.css" rel="stylesheet">
+    <link href="static/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/css/style.css" rel="stylesheet">
+    <link href="static/assets/css/responsive.css" rel="stylesheet">
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+          <script src="js/html5shiv.min.js"></script>
+          <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body class="sticky-header">
+
+ <!--Start login Section-->
+<section class="login-section">
+  <div class="container">
+
+      <div class="logo">
+        <img src="../static/images/fish.png"  alt="logo"/>
+      </div>
+          
+    <div class="login-wrapper">
+                  
+        <h2 class="header-title text-center">请登录</h2>
+          
+          <form action="/login/1" method="post">
+            <div class="form-group">
+              <input type="text" name="username" class="form-control"  placeholder="Username" >
+            </div>
+            
+            <div class="form-group">
+              <input type="text" name="password" class="form-control"  placeholder="Password" >
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Login" class="btn btn-primary btn-block" >
+            </div>
+          </form>
+
+          <div class="form-group">
+              <div class="pull-left">
+              <div class="checkbox primary">
+                <input  id="checkbox-2" type="checkbox">
+                <label for="checkbox-2">Remember me</label>
+              </div>
+              </div>
+
+              <div class="pull-right">
+                <form action="/login/2" class="a-link" method="post">
+                  <button type="submit" class="fa fa-unlock-alt"> Forgot password?</button>
+                </form>
+              </div>
+            </div>
+            <!--<form action="/login/3" class="a-link" method="post">-->
+              <div class="form-group text-center">
+                  Don't have an account?  <a type="submit" href="/registration">Sign Up</a>
+              </div>
+            <!--</form>-->
+          <div class="copy-text"> 
+            <p class="m-0"></p>
+          </div>
+    </div>
+  </div>
+</section>
+ <!--End login Section-->
+
+    <!--Begin core plugin -->
+    <script src="static/assets/js/jquery.min.js"></script>
+    <script src="static/assets/js/bootstrap.min.js"></script>
+    <!-- End core plugin -->
+
+</body>
+
+</html>

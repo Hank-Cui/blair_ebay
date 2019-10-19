@@ -1,0 +1,136 @@
+html { 
+    height:100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    position: absolute;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	left: 0;
+    right: 0;
+    background: linear-gradient(#5D658F,#C39C86)
+    
+}
+
+.navi-bar {
+    margin: 0;
+    padding: 0;
+    height: 12vh;
+}
+
+.logo-image{
+    height: inherit;
+    width: auto;
+    padding: 2vh 0 0 2vw;
+}
+
+.navi {
+    list-style-type: none;
+    margin: 0;
+    padding: 5vh 3vw 0 0;
+    overflow: hidden;
+    float: right;
+    /* background-color:rgb(224, 183, 183); */
+    
+}
+.navi li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.navi li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 2vh 2vw;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.navi li a:hover {
+    background-color: rgba(255, 255, 255, 0.205);
+}
+
+.header {
+    height: 56vh;
+    margin: 0;
+    padding: 32vh 0 0 4vw;
+    font-weight: 100;
+}
+
+#title {
+    font-size: 6vmin;
+}
+
+.task_list {
+    margin: 0;
+    padding: 5vh 2vw;
+    columns: 3;
+    -moz-columns: 3; /* Firefox */
+    -webkit-columns: 3; /* Safari 和 Chrome */
+    background-color: rgb(233, 233, 233);
+}
+
+.tasks {
+    display: block;
+    width: 30vw;
+    background-color: rgb(166, 178, 200);
+    padding-bottom: 2vw;
+    border-radius: 16px;
+}
+
+.tasks img {
+    object-fit: cover;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    height: 40vh;
+    width: inherit;
+    z-index: -1;
+}
+
+.tasks h4 {
+    padding: 0 2vw 0 2vw;
+}
+
+.tasks p {
+    padding: 0 2vw 0 2vw;
+}
+
+
+/* 
+#####################################
+登录页面
+login.html
+#####################################
+*/
+
+.sticky-header {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(#5D658F,#C39C86)
+}
+
+.login-section {
+    display: block;
+    margin: 16vh;
+    height: 68vh;
+    width: 30vw;
+}
+
+.login-wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+.header-title {
+    width:100vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 6vmin;
+    font-weight: 100;
+
+}

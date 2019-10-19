@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="/static/assets/images/favicon.png" type="image/png">
+  <title></title>
+   <link href="/static/assets/css/icons.css" rel="stylesheet">
+    <link href="/static/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/assets/css/style.css" rel="stylesheet">
+    <link href="/static/assets/css/responsive.css" rel="stylesheet">
+
+    <script type='text/javascript' src='/static/assets/js/jquery-1.4.4.min.js'></script>
+    <script language='javascript' src="/static/assets/js/zzsc.js"></script>
+
+</head>
+
+<body>
+ <!--Start login Section-->
+  <section class="login-section">
+       <div class="container">
+           <div class="row">
+               <div class="login-wrapper">
+                   <div class="login-inner">
+
+                       <div class="logo">
+                         <img src="/static/assets/images/logo-dark.png"  alt="logo"/>
+                       </div>
+
+                   		<h2 class="header-title text-center">Sign Up</h2>
+
+													<div class='box_main'>
+														<div id="register" class="register">
+															<form id="form"  onSubmit="return check();" method="post" action="/registration">
+																<div id="form_submit" class="form_submit">
+																	<div class="fieldset">
+																		<div class="field-group">
+
+
+																			 <span class="control-group" id="name1_input">
+																			 <div class="input_add_long_background">
+																			 	<input class="form-control" type="txt" id="name1" name="name1" maxLength="20" value="" onblur="checkName1(this.value);" placeholder="Username"/>
+																				<p>6~20个英文字母（区分大小写）、符号或数字</p>
+
+																				 <br />
+																			</div>
+																			</span>
+																		<div class="field-group">
+
+																			<span class="control-group" id="email_input">
+																			<div class="input_add_long_background">
+																				<input class="form-control" type="text" id="email" name="email" maxLength="50" value="" onblur="__changeUserName('email');" placeholder="Email">
+																			<p>请确保邮箱地址的正确</p>
+																			<br />
+																			</div>
+																			</span>
+
+																		</div>
+
+																		</div>
+																		<div class="field-group">
+
+																			<span class="control-group" id="password1_input">
+																			<div class="input_add_long_background">
+																				<input class="form-control" type="password" id="password1" name="password1" maxLength="20" value="" onblur="checkPwd1(this.value);" placeholder="Password"/>
+																			<p>6~20个英文字母（区分大小写）、符号或数字</p>
+																			<br />
+																			</div>
+																			</span>
+																		</div>
+
+																		</div>
+
+																<!-- 提交部分 -->
+																  <span class="control-group" id="CheckBox_input">
+																		<div class="checkbox primary">
+																		<input type="checkbox" id="verify" onblur="checkBox1(this.value);" >
+																		<label for="verify">I accept <a href="#">Terms and Conditions</a></label>
+																  <!--</span>-->
+
+																<div class="form-group">
+																		<input type="submit" value="Sign Up" class="btn btn-primary btn-block" >
+																</div>
+																<div id="div_submit" class="div_submit">
+																	<div class="form-group text-center">
+																	Already have an account?  <a href="/" >Sign In </a>
+																	</div>
+																</div>
+																		</div>
+																  </span>
+																</div>
+															</form><!-- 提交结束 -->
+																		</div>
+																  </span>
+													 <!-- 测试结束 -->
+                       <!--</form>-->
+                        <div class="copy-text">
+                         <p class="m-0">2017 &copy; Meter admin</p>
+                        </div>
+ <!--End login Section-->
+<!-- 测试 -->
+<script type="text/javascript">
+function __changeUserName(of){
+  var username=$('#'+of).val();
+  if(of=='email'){
+	  if (username.search(/[\w]+(\.[\w]+)*@[\w]+(\.[\w])+/) == -1) {
+			showTooltips('email_input','请输入正确的Email地址');
+			return;
+	}
+  }
+  else{
+	  if(username=='' || !isMobilePhone(username)) {
+		  showTooltips('mobile_input','请输入正确的手机号码');
+		  return;
+	  }
+  }
+}
+function checkPwd1(pwd1) {
+	if (pwd1.search(/^.{6,20}$/) == -1) {
+		showTooltips('password1_input','密码为空或位数太少');
+	}else {
+		hideTooltips('password1_input');
+	}
+}
+function checkName1(pwd2) {
+	if (pwd2.search(/^.{6,20}$/) == -1) {
+		showTooltips('name1_input','用户名为空或位数太少');
+	}else {
+		hideTooltips('name1_input');
+	}
+}
+function checkEmail(email) {
+	if (email.search(/^.+@.+$/) == -1) {
+		showTooltips('email_input','邮箱格式不正确');
+	}else {
+		hideTooltips('email_input');
+	}
+}
+
+// 检查函数
+function check() {
+	hideAllTooltips();
+	var ckh_result = true;
+	if ($('#email').val() == '' || $('#email').val().search(/^.+@.+$/) == -1) {
+	showTooltips('email_input','邮箱为空或格式不正确');
+	ckh_result = false;
+  	}
+	if ($('#password1').val() == '' || $('#password1').val().search(/^.{6,20}$/) == -1) {
+	showTooltips('password1_input','密码为空或者长度不够');
+	ckh_result = false;
+	}
+	if ($('#name1').val() == '' || $('#name1').val().search(/^.{6,20}$/) == -1) {
+	showTooltips('name1_input','用户名为空或者格式不正确');
+	ckh_result = false;
+	}
+	if (document.getElementById("verify").checked==false) {
+	showTooltips('CheckBox_input','请勾选准则，表示同意平台的规则');
+	ckh_result = false;
+	}
+
+  return ckh_result;
+}
+
+</script>
+</span>
+															</form>
+														</div>
+													</div>
+				   </div>
+			   </div>
+		   </div>
+	   </div>
+  </section>
+</body>
+</html>
